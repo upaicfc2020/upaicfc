@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+ body {
+  background-color: white;
+   }
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.wrapper-dropdown-3 {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    color: green;
+}
+
+.layout-image {
+  background-image: url("");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.column {
+  float: left;  
+  height: 75%px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 10%;
+}
+.center {
+  width: 10%;
+}
+.right {
+  width: 10%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  </style>
+</head>
+<body>
+<div>
+<div class="row" style="padding-left: 40%;">
+  <div class="column left">
+<img src="{{ map_html }}" style="width:100%;" alt=""/>
+  </div>
+  <div class="column center">
+  <img src="{{ chat }}" style="width:100%;" alt=""/>
+  </div>
+<div class="column right">
+<img src="{{ earth }}" style="width:100%;" alt=""/>
+  </div>
+</div>
+<h1 style="color:Grey;text-align: center;">Urban Planning using Artificial Intelligence</h1>
+</div>
+  <form action="/image" method="post" style= "text-align:center;background-color: whitesmoke;" class="layout-image">
+<br>
+     <p style="font-family:verdana;color:black">Please select a location:</p>
+     <label for="location"> </label>
+
+      <select name="location" id="loc" class="wrapper-dropdown-3">
+         <option value="Sipcot"></option>
+         <option value="Sipcot">Sipcot IT Park</option>
+         <option value="DLF">DLF Tech Park</option>
+         <option value="Tidel">Tidel Park</option>
+      </select>
+
+    <br><br>
+    <input type="submit" value="Submit" class="button button1">
+    <br>
+<img src="{{ school }}" alt="" style="width:30%;">
+ <p style="font-family:verdana;color:black">Choose the location where you want to live and get the Human-Nature index | Building classification | Land Classification | Population | Water Sources</p>
+
+  </form>
+</body>
+</html>
